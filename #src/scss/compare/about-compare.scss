@@ -1,0 +1,55 @@
+.about-compare {
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -15px;
+
+      @media screen and (max-width: 1050px) {
+         flex-direction: column;
+      }
+
+      @media screen and (max-width: 1250px) {
+         margin: 0;
+      }
+   }
+
+   &__title {
+      width: 50%;
+      margin: 0 15px;
+
+      @media screen and (max-width: 1250px) {
+         margin: 0 0 30px;
+         width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+         margin: 0 0 20px;
+      }
+   }
+
+   &__text {
+      @include fonts(20px, 28px, 400);
+      color: $black1;
+      width: 100%;
+      margin: 0 15px;
+      max-width: 560px;
+
+      @media screen and (max-width: 1250px) {
+         margin: 0;
+      }
+
+      @media screen and (max-width: 1050px) {
+         max-width: 680px;
+      }
+
+      @media screen and (max-width: 576px) {
+         font-size: 16px;
+      }
+   }
+}
+
+.compare-home .compare-tab__logo {
+   @media screen and (max-width: 576px) {
+      margin-bottom: 5px;
+   }
+}

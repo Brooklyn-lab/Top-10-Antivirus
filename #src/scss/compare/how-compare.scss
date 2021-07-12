@@ -1,0 +1,91 @@
+.how-compare {
+   background: #f2f2f8;
+   padding: 160px 0;
+
+   @media screen and (max-width: 992px) {
+      padding: 100px 0;
+   }
+
+   @media screen and (max-width: 768px) {
+      padding: 80px 0;
+   }
+
+   @media screen and (max-width: 576px) {
+      padding: 60px 0;
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -15px;
+
+      @media screen and (max-width: 1250px) {
+         margin: 0;
+      }
+
+      @media screen and (max-width: 992px) {
+         flex-direction: column;
+      }
+   }
+
+   &__text-wrapper {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 15px;
+
+      @media screen and (max-width: 1250px) {
+         margin-left: 30px;
+      }
+
+      @media screen and (max-width: 992px) {
+         margin: 30px 0;
+         max-width: initial;
+      }
+   }
+
+   &__title {
+      @include title;
+      margin: 0 15px;
+      max-width: 420px;
+
+      @media screen and (max-width: 1250px) {
+         margin: 0;
+      }
+
+      @media screen and (max-width: 992px) {
+         max-width: 500px;
+      }
+   }
+
+   &__text {
+      @include fonts(18px, 27px, 300);
+      color: $black1;
+      @media screen and (max-width: 576px) {
+         font-size: 16px;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+.compare-why-antivirus {
+   padding: 160px 0;
+
+   @media screen and (max-width: 992px) {
+      padding: 100px 0;
+   }
+
+   @media screen and (max-width: 768px) {
+      padding: 80px 0;
+   }
+
+   @media screen and (max-width: 576px) {
+      padding: 60px 0;
+   }
+
+   .why-antivirus__transparency {
+      margin: 0;
+   }
+}

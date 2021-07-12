@@ -1,0 +1,38 @@
+//----------- Section prew-block --------------
+
+.prew-block {
+   &__container {
+      max-width: 1300px;
+      background: url("../img/banner.jpg") no-repeat right;
+      padding: 60px 15px 100px 80px;
+
+      @media screen and (max-width: 992px) {
+         padding: 60px 15px 60px 30px !important;
+      }
+
+      @media screen and (max-width: 768px) {
+         padding: 50px 10px !important;
+         background: no-repeat 67% / cover url("../img/banner.jpg");
+      }
+   }
+
+   &__body {
+      max-width: 561px;
+   }
+
+   &__title {
+      @include fonts(54px, 62px, 700);
+      color: #fafafa;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: 768px) {
+         font-size: 47px;
+      }
+   }
+
+   &__text {
+      color: #fafafa;
+      font-weight: 700;
+      line-height: 25px;
+   }
+}

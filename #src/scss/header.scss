@@ -1,0 +1,172 @@
+.header {
+  padding: 35px 0;
+
+  @media (max-width: $md2+px) {
+    padding: 15px 0;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $md2+px) {
+      flex-direction: column;
+      align-items: baseline;
+    }
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__navigation {
+    margin-left: 15px;
+
+    @media (max-width: $md2+px) {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 0;
+      position: relative;
+      top: -100%;
+      transition: top 1s ease 0s, height 1s ease-in;
+
+      &.active {
+        margin: 45px 0 30px;
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+
+    @media (max-width: $md2+px) {
+      height: 0;
+      margin-top: 10px;
+
+      &.active {
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+
+      @media (max-width: $md2+px) {
+        margin: 0 0 50px 0;
+      }
+    }
+
+    @media (max-width: $md2+px) {
+      z-index: -1;
+      opacity: 0;
+      vertical-align: baseline;
+    }
+
+    &.active {
+      z-index: 100;
+      &:first-child {
+        @include transition(0.2s);
+      }
+
+      &:nth-child(2) {
+        @include transition(0.3s);
+      }
+
+      &:nth-child(3) {
+        @include transition(0.4s);
+      }
+
+      &:nth-child(4) {
+        @include transition(0.5s);
+      }
+    }
+  }
+
+  &__link {
+    @include fonts(18px, 16px, 400);
+    color: $black1;
+    transition: color 0.3s ease 0s;
+
+    @media (max-width: $md2+px) {
+      font-size: 36px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+
+  &__burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+      width: 100%;
+    }
+  }
+}
+
+// Burger menu
+
+.icon-menu {
+  display: none;
+
+  @media (max-width: $md2+px) {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span {
+      transition: all 0.3s ease 0s;
+      top: calc(50% - 1px);
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $blue;
+      &:first-child {
+        top: 0;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    &.active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+}

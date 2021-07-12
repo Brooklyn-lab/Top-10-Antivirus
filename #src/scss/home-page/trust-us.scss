@@ -1,0 +1,60 @@
+//-------------------- Section Trust-us --------------------
+
+.trust-us {
+   background: #f2f2f8;
+   padding: 160px 0;
+
+   &__container {
+      max-width: 1330px;
+      width: 100%;
+   }
+
+   &__title {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+
+   &__images {
+      margin: 20px 0 80px;
+
+      @media screen and (max-width: 992px) {
+         margin-bottom: 50px;
+      }
+   }
+
+   &__img {
+      max-width: 100%;
+   }
+
+   &__text {
+      font-weight: 300;
+      width: 33.333%;
+      margin-right: 60px;
+
+      @media screen and (max-width: 992px) {
+         width: 100%;
+         margin: 0 0 20px 0;
+      }
+   }
+
+   &__text-strong {
+      @include fonts(20px, 28px, 400);
+      width: 33.333%;
+
+      @media screen and (max-width: 992px) {
+         width: 100%;
+      }
+   }
+}
+.content-text-wrapper {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+
+   @media screen and (max-width: 992px) {
+      flex-direction: column;
+   }
+}

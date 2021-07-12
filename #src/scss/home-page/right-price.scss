@@ -1,0 +1,51 @@
+//----------- Right-price section --------------
+
+.right-price {
+   background: #f2f2f8;
+
+   &__body {
+      margin-top: 60px;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 40px;
+      }
+   }
+
+   &__text-wrapper {
+      @media screen and (max-width: 992px) {
+         flex-direction: initial;
+      }
+
+      @media screen and (max-width: 768px) {
+         flex-direction: column;
+      }
+   }
+
+   &__text {
+      width: 50%;
+
+      @media screen and (max-width: 768px) {
+         width: 100%;
+      }
+
+      &:first-child {
+         margin-right: 60px;
+
+         @media screen and (max-width: 992px) {
+            margin-right: 25px;
+         }
+
+         @media screen and (max-width: 768px) {
+            margin: 0 0 20px 0;
+         }
+      }
+   }
+
+   &__image {
+      margin-left: 60px;
+
+      @media screen and (max-width: 992px) {
+         display: none;
+      }
+   }
+}

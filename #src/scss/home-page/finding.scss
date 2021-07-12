@@ -1,0 +1,56 @@
+//----------- Section finding --------------
+
+.finding {
+
+   &__body {
+      margin-top: 70px;
+
+      @media screen and (max-width: 992px) {
+         margin-top: 50px;
+      }
+   }
+
+   &__title-wrapper {
+      width: 100%;
+      padding: 540px 0 0 0;
+      background: url("../img/finding.jpg") no-repeat 32% / cover;
+
+      @media screen and (max-width: 768px) {
+         padding: 320px 0 0 0;
+      }
+   }
+
+   &__title-body {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 50px 50px 0;
+      background: #fff;
+
+      @media screen and (max-width: 992px) {
+         padding: 50px 15px 0;
+      }
+   }
+
+   &__text {
+      @include fonts(18px, 27px, 300);
+      color: #1a1a1a;
+      width: 50%;
+
+      @media screen and (max-width: 992px) {
+         width: 100%;
+      }
+
+      &:not(:last-child) {
+         margin-right: 80px;
+
+         @media screen and (max-width: 992px) {
+            margin: 0 0 20px 0;
+         }
+      }
+   }
+
+   &__emphasise {
+      color: $blue;
+      text-decoration: underline;
+   }
+}

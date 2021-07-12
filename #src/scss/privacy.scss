@@ -1,0 +1,105 @@
+.privacy {
+   &__wrapper {
+      margin-top: 80px;
+
+      @media screen and (max-width: 576px) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__title {
+      @include fonts(36px, 32px, 500);
+      color: $black1;
+      margin-bottom: 30px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 32px;
+      }
+   }
+
+   &__text {
+      @include fonts(18px, 32px, 300);
+      color: $black;
+      margin-bottom: 25px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 17px;
+      }
+   }
+
+   &__subtitle {
+      @include fonts(26px, 23px, 400);
+      color: #909090;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 24px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__list-item {
+      @include fonts(18px, 27px, 300);
+      color: $black;
+      position: relative;
+      padding-left: 30px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 16px;
+      }
+
+      &__one {
+         margin-bottom: 30px;
+
+         @media screen and (max-width: 576px) {
+            margin-bottom: 20px;
+         }
+      }
+
+      span {
+         color: $blue;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: 3px;
+         height: 3px;
+         background: $black;
+         top: 11px;
+         left: 13px;
+         border-radius: 50%;
+      }
+   }
+}
+.privacy-example {
+   margin-top: 60px;
+
+   &__title {
+      @include fonts(15px, 15px, 400);
+      color: $black;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 14px;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__text {
+      @include fonts(18px, 27px, 300);
+      color: $black;
+
+      @media screen and (max-width: 576px) {
+         font-size: 16px;
+      }
+
+      a {
+         text-decoration: underline;
+      }
+   }
+}

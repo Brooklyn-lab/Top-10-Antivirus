@@ -1,0 +1,348 @@
+//----------- Section cards --------------
+
+.cards {
+   &__more {
+      @include fonts(14px, 13px, 500);
+      color: $blue;
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   &__arrow {
+      width: 11px;
+      height: 11px;
+      color: $blue;
+      margin-left: 4px;
+
+      &.active {
+         transition: transform 0.3s ease 0s;
+         transform: rotate(-180deg);
+      }
+   }
+}
+.card {
+   background: #f1f1f1;
+   border-radius: 5px;
+   padding: 30px;
+   margin-bottom: 38px;
+   display: grid;
+   grid-template-columns: 270px 1fr;
+   gap: 40px 60px;
+   grid-template-areas:
+      "position reits-wrapp"
+      "position text-wrapp";
+
+   @media screen and (max-width: 992px) {
+      grid-template-areas:
+         "position reits-wrapp"
+         "text-wrapp text-wrapp";
+   }
+
+   @media screen and (max-width: 768px) {
+      gap: 40px;
+   }
+
+   @media screen and (max-width: 650px) {
+      grid-template-columns: 1fr;
+      padding: 30px 15px;
+
+      grid-template-areas:
+         "position"
+         "reits-wrapp"
+         "text-wrapp";
+   }
+
+   @media screen and (max-width: 576px) {
+      gap: 30px;
+      padding: 30px 10px;
+   }
+
+   &__position {
+      display: flex;
+      flex-direction: column;
+      grid-area: position;
+   }
+
+   &__reits-wrapp {
+      grid-area: reits-wrapp;
+   }
+
+   &__text-wrapp {
+      grid-area: text-wrapp;
+   }
+
+   &__place {
+      background: #c1c1c1;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 8px;
+      max-width: 270px;
+      width: 100%;
+
+      &_first {
+         background: $blue;
+      }
+
+      p {
+         @include fonts(18px, 16px, 500);
+         color: #fafafa;
+
+         @media screen and (max-width: 576px) {
+            font-size: 16px;
+         }
+      }
+   }
+
+   &__num {
+      @include fonts(18px, 16px, 500);
+      color: $black1;
+      background: $white;
+      border-radius: 14px;
+      padding: 14px 11px;
+      margin-right: 35px;
+
+      @media screen and (max-width: 576px) {
+         font-size: 16px;
+      }
+   }
+
+   &__images-wrapper {
+      margin-top: 10px;
+   }
+
+   &__images {
+      &:first-child {
+         margin-bottom: 5px;
+      }
+
+      img {
+         border-radius: 5px;
+      }
+   }
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      width: 100%;
+
+      @media screen and (max-width: 1199px) {
+         flex-direction: column;
+         align-items: baseline;
+      }
+   }
+
+   &__name {
+      @include fonts(36px, 32px, 500);
+      color: $black1;
+
+      @media screen and (max-width: 576px) {
+         font-size: 34px;
+      }
+   }
+
+   &__about-link {
+      @include fonts(14px, 12px, 500);
+      color: $blue;
+   }
+
+   &__awards-wrapp {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 1199px) {
+         margin-top: 20px;
+      }
+
+      @media screen and (max-width: 992px) {
+         align-items: flex-start;
+         flex-direction: column;
+      }
+   }
+
+   &__awards {
+      display: flex;
+      margin-right: 40px;
+
+      img {
+         margin-left: 20px;
+
+         @media screen and (max-width: 1199px) {
+            margin-left: 0;
+         }
+      }
+   }
+
+   &__reits-wrapper {
+      display: flex;
+
+      @media screen and (max-width: 992px) {
+         flex-direction: column;
+      }
+   }
+
+   &__reits {
+      display: flex;
+      margin-right: 30px;
+
+      @media screen and (max-width: 992px) {
+         margin: 0 0 20px 0;
+      }
+   }
+
+   &__reits-star-wrapp {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      align-items: flex-start;
+   }
+
+   &__text {
+      @include fonts(14px, 13px, 400);
+      font-weight: normal;
+      color: #9a9a9a;
+
+      &_days {
+         color: $black1;
+      }
+   }
+
+   &__number {
+      @include fonts(45px, 40px, 400);
+      color: $black1;
+   }
+
+   &__stars {
+      display: flex;
+      margin-bottom: 4px;
+   }
+
+   &__star {
+      width: 20px;
+      height: 20px;
+
+      &:not(:last-child) {
+         margin-right: 4px;
+      }
+   }
+
+   &__compatibility-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__compatibility {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+   }
+
+   &__icons-wrapper {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+   }
+
+   &__icons {
+      width: 24px;
+      height: 16px;
+
+      &:not(:last-child) {
+         margin-right: 4px;
+      }
+   }
+
+   &__text-awords {
+      @include fonts(20px, 28px, 400);
+      color: $black1;
+      margin: 0 0 30px;
+
+      @media screen and (max-width: 576px) {
+         @include fonts(18px, 26px, 400);
+      }
+   }
+
+   &__about-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__about {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   &__about-item {
+      @include fonts(18px, 25px, 300);
+      color: $black1;
+
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: 576px) {
+         @include fonts(16px, 24px, 300);
+      }
+   }
+}
+
+.button-about {
+   border: 1px solid $blue;
+   padding: 9px 25px;
+   background: transparent;
+   max-width: 250px;
+   align-items: center;
+   display: flex;
+   text-transform: uppercase;
+   width: 100%;
+   justify-content: space-between;
+   @include button-hover;
+
+   @media screen and (max-width: 992px) {
+      margin-top: 20px;
+   }
+}
+
+.button-about__text {
+   @include fonts(15px, 21px, 500);
+   color: $blue;
+   margin-right: 62px;
+}
+
+.button-about__arrow {
+   width: 32px;
+   height: 32px;
+   stroke: $blue;
+}
+
+.card-hidden {
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.1s ease-in opacity, 0.1s ease-in visibility;
+   height: 0;
+   padding: 0;
+   margin: 0;
+
+   @media screen and (max-width: 576px) {
+      padding: 0;
+   }
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+      display: grid;
+      padding: 30px;
+      margin-bottom: 38px;
+
+      @media screen and (max-width: 576px) {
+         padding: 30px 10px;
+      }
+   }
+}

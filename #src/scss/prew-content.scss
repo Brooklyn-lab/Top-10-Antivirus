@@ -1,0 +1,43 @@
+.prew-content {
+   background: #f2f2f8;
+   padding: 60px 0;
+
+   @media screen and (max-width: 576px) {
+      padding: 45px 0;
+   }
+
+   &__title {
+      @include title;
+   }
+
+   &__subtitle {
+      margin-top: 10px;
+      @include subtitle;
+   }
+}
+
+.disclaimer-about {
+   &__body {
+      display: flex;
+
+      @media screen and (max-width: 900px) {
+         flex-direction: column;
+      }
+   }
+
+   &__text {
+      width: 50%;
+
+      @media screen and (max-width: 900px) {
+         width: 100%;
+      }
+
+      &:not(:last-child) {
+         margin-right: 60px;
+
+         @media screen and (max-width: 900px) {
+            margin: 0 0 20px 0;
+         }
+      }
+   }
+}

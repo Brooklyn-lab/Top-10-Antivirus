@@ -1,0 +1,76 @@
+.footer {
+  padding: 80px 0;
+  background: #150f38;
+  margin-top: auto;
+
+  @media screen and (max-width: 749px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 40px 0;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-bottom: 80px;
+
+    @media screen and (max-width: 749px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 576px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 749px) {
+      margin-top: 25px;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 576px) {
+      justify-content: flex-start;
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 45px;
+
+      @media screen and (max-width: 576px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    @include fonts(18px, 16px, 400);
+    color: #fff;
+    transition: 0.25ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+}
